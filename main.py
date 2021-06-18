@@ -56,9 +56,13 @@ def callback():
  
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
+
+    if "授業" in event.message.text:
+        content = "明日の授業は..."
+
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=event.message.text)) #ここでオウム返しのメッセージを返します。
+        TextSendMessage(text=content)) #ここでオウム返しのメッセージを返します。
  
 # ポート番号の設定
 if __name__ == "__main__":
