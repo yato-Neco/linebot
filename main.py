@@ -76,7 +76,54 @@ def handle_message(event):
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=content)) #ここでオウム返しのメッセージを返します。
- 
+
+def schedule_week2(week):
+    json_open = open('week2.json', 'r',encoding="utf-8")
+    json_load = json.load(json_open)
+    idx = len(json_load[week]["class"])
+    indx = idx
+    weeks = week
+    if weeks == 1:
+        embed = discord.Embed(title=json_load[week]["week"],color=0x00FF00)
+        embed.add_field(name=json_load[week]["class"][indx - 1], value=json_load[week]["time"][indx - 1], inline=False)
+        return embed
+    if weeks == "Monday":
+        embed = discord.Embed(title=json_load[week]["week"],color=0x00ff00,url="https://sites.google.com/g.neec.ac.jp/hac-it-ai02-all/2%E7%B5%84%E6%8E%88%E6%A5%AD%E3%83%AA%E3%83%B3%E3%82%AF#h.64dgy083n7j1")
+        embed.add_field(name=json_load[week]["class"][indx - 2], value=json_load[week]["time"][indx - 2], inline=False)
+        embed.add_field(name=json_load[week]["class"][indx - 1], value=json_load[week]["time"][indx - 1], inline=False)
+        print("M")
+        return embed
+    if weeks == "Wednesday":
+        embed = discord.Embed(title=json_load[week]["week"],color=0x00ff00,url="https://sites.google.com/g.neec.ac.jp/hac-it-ai02-all/2%E7%B5%84%E6%8E%88%E6%A5%AD%E3%83%AA%E3%83%B3%E3%82%AF#h.enh563r3am7t")
+        embed.add_field(name=json_load[week]["class"][indx - 3], value=json_load[week]["time"][indx - 3], inline=False)
+        embed.add_field(name=json_load[week]["class"][indx - 2], value=json_load[week]["time"][indx - 2], inline=False)
+        embed.add_field(name=json_load[week]["class"][indx - 1], value=json_load[week]["time"][indx - 1], inline=False)
+        print("W")
+        return embed
+    if weeks == "Thursday":
+        embed = discord.Embed(title=json_load[week]["week"],color=0x00ff00,url="https://sites.google.com/g.neec.ac.jp/hac-it-ai02-all/2%E7%B5%84%E6%8E%88%E6%A5%AD%E3%83%AA%E3%83%B3%E3%82%AF#h.mustv3jw6wer")
+        embed.add_field(name=json_load[week]["class"][indx - 4],value=json_load[week]["time"][indx - 4], inline=False)
+        embed.add_field(name=json_load[week]["class"][indx - 3], value=json_load[week]["time"][indx - 3], inline=False)
+        embed.add_field(name=json_load[week]["class"][indx - 2], value=json_load[week]["time"][indx - 2], inline=False)
+        embed.add_field(name=json_load[week]["class"][indx - 1], value=json_load[week]["time"][indx - 1], inline=False)
+        print("T")
+        return embed
+    if weeks == "Tuesday":
+        embed = discord.Embed(title=json_load[week]["week"],color=0x00ff00,url="https://sites.google.com/g.neec.ac.jp/hac-it-ai02-all/2%E7%B5%84%E6%8E%88%E6%A5%AD%E3%83%AA%E3%83%B3%E3%82%AF#h.xu0w5gswu0lz")
+        embed.add_field(name=json_load[week]["class"][indx - 5], value=json_load[week]["time"][indx - 5], inline=False)
+        embed.add_field(name=json_load[week]["class"][indx - 4], value=json_load[week]["time"][indx - 4], inline=False)
+        embed.add_field(name=json_load[week]["class"][indx - 3], value=json_load[week]["time"][indx - 3], inline=False)
+        embed.add_field(name=json_load[week]["class"][indx - 2], value=json_load[week]["time"][indx - 2], inline=False)
+        embed.add_field(name=json_load[week]["class"][indx - 1], value=json_load[week]["time"][indx - 1], inline=False)
+        print("Tu")
+        return embed
+    if weeks == "Friday":
+        embed = discord.Embed(title=json_load[week]["week"],color=0x00ff00,url="https://sites.google.com/g.neec.ac.jp/hac-it-ai02-all/2%E7%B5%84%E6%8E%88%E6%A5%AD%E3%83%AA%E3%83%B3%E3%82%AF#h.hzk0p75dg3mh")
+        embed.add_field(name=json_load[week]["class"][indx - 2], value=json_load[week]["time"][indx - 2], inline=False)
+        embed.add_field(name=json_load[week]["class"][indx - 1], value=json_load[week]["time"][indx - 1], inline=False)
+        print("F")
+
+        return embed
 # ポート番号の設定
 if __name__ == "__main__":
 #    app.run()
