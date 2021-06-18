@@ -64,16 +64,24 @@ def handle_message(event):
     if "授業" in event.message.text:
         content = "明日の授業は..."
 
-        content = schedule_week2(week)
+        json_open = open('week2.json', 'r',encoding="utf-8")
+        json_load = json.load(json_open)
+        idx = len(json_load[week]["class"])
+        if idx == 1:
+            buffa = json_load[week]["week"] +  json_load[week]["class"][indx - 1]
+
+            content = buffa
+        if weeks == "Friday":
+            buffa = json_load[week]["class"][indx - 2] + json_load[week]["time"][indx - 2] + json_load[week]["class"][indx - 1] + json_load[week]["time"][indx - 1]
+            content = buffa
+
 
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=content)) #ここでオウム返しのメッセージを返します。
 
 def schedule_week2(week):
-    json_open = open('week2.json', 'r',encoding="utf-8")
-    json_load = json.load(json_open)
-    idx = len(json_load[week]["class"])
+    
     indx = idx
     weeks = week
     if weeks == 1:
