@@ -66,6 +66,7 @@ def handle_message(event):
 
         json_open = open('week2.json', 'r',encoding="utf-8")
         json_load = json.load(json_open)
+        week = dt.datetime.now().strftime("%A")
         idx = len(json_load[week]["class"])
         if idx == 1:
             buffa = json_load[week]["week"] +  json_load[week]["class"][indx - 1]
