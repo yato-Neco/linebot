@@ -114,13 +114,6 @@ async def handle_message(event):
             TextSendMessage(text=content))
 
 
-async def time():
- while updata == True:
-    week = dt.datetime.now().strftime("%A")
-    print(week)
-    await asyncio.sleep(1)
-
-
 
 
 # ポート番号の設定
