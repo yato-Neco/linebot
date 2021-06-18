@@ -5,6 +5,8 @@ import datetime
 import datetime as dt
 import json
 import time
+import asyncio
+
  
 from linebot import (
     LineBotApi, WebhookHandler
@@ -48,18 +50,10 @@ def callback():
     #handleの処理を終えればOK
     return 'OK'
  
-## 2 ##
-###############################################
-#LINEのメッセージの取得と返信内容の設定(オウム返し)
-###############################################
- 
-#LINEでMessageEvent（普通のメッセージを送信された場合）が起こった場合に、
-#def以下の関数を実行します。
-#reply_messageの第一引数のevent.reply_tokenは、イベントの応答に用いるトークンです。 
-#第二引数には、linebot.modelsに定義されている返信用のTextSendMessageオブジェクトを渡しています。
+
  
 @handler.add(MessageEvent, message=TextMessage)
-def handle_message(event):
+async def handle_message(event):
 
     if "授業" in event.message.text:
         content = "明日の授業は..."
@@ -72,14 +66,61 @@ def handle_message(event):
             buffa = json_load[week]["week"] +  json_load[week]["class"][indx - 1]
 
             content = buffa
+
+        if week == "Monday":
+            buffa = json_load[week]["class"][indx - 2] + json_load[week]["time"][indx - 2] + json_load[week]["class"][indx - 1] + json_load[week]["time"][indx - 1]
+
+            content - buffa
+
+        if week == "Wednesday":
+            buffa = json_load[week]["class"][indx - 3] + json_load[week]["time"][indx - 3] + json_load[week]["class"][indx - 2] + json_load[week]["time"][indx - 2] + json_load[week]["class"][indx - 1] + json_load[week]["time"][indx - 1]
+
+            content = buffa
+
+        if week == "Thursday":
+            buffa = json_load[week]["class"][indx - 4]
+            + json_load[week]["time"][indx - 4]
+            + json_load[week]["class"][indx - 3]
+            + json_load[week]["time"][indx - 3]
+            + json_load[week]["class"][indx - 2]
+            + json_load[week]["time"][indx - 2]
+            + json_load[week]["class"][indx - 1]
+            + json_load[week]["time"][indx - 1]
+
+            content = buffa
+
+        if week == "Tuesday":
+            buffa = json_load[week]["class"][indx - 5]
+            + json_load[week]["time"][indx - 5]
+            + json_load[week]["class"][indx - 4]
+            + json_load[week]["time"][indx - 4]
+            + json_load[week]["class"][indx - 3]
+            + json_load[week]["time"][indx - 3]
+            + json_load[week]["class"][indx - 2]
+            + json_load[week]["time"][indx - 2]
+            + json_load[week]["class"][indx - 1]
+            + json_load[week]["time"][indx - 1]
+
+            content = buffa
+
         if week == "Friday":
             buffa = json_load[week]["class"][indx - 2] + json_load[week]["time"][indx - 2] + json_load[week]["class"][indx - 1] + json_load[week]["time"][indx - 1]
+
             content = buffa
 
 
-    line_bot_api.reply_message(
-        event.reply_token,
-        TextSendMessage(text=content)) 
+    await line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text=content))
+
+
+async def time():
+ while updata == True:
+    week = dt.datetime.now().strftime("%A")
+    print(week)
+    await asyncio.sleep(1)
+
+
 
 
 # ポート番号の設定
