@@ -72,7 +72,7 @@ def handle_message(event):
             buffa = json_load[week]["week"] +  json_load[week]["class"][indx - 1]
 
             content = buffa
-        if weeks == "Friday":
+        if week == "Friday":
             buffa = json_load[week]["class"][indx - 2] + json_load[week]["time"][indx - 2] + json_load[week]["class"][indx - 1] + json_load[week]["time"][indx - 1]
             content = buffa
 
