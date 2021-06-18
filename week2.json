@@ -1,0 +1,32 @@
+{
+
+    "Monday": {
+        "week"  :"** 2組 Monday **",
+        "class" : ["** コンピュータ・テクノロジー\n(https://classroom.google.com/c/MzEyMjY3MzExMzYz) **", "** Web技術基礎\n(https://classroom.google.com/c/MzEyMjY3MzExMTM3) **"],
+        "time" : [" 9:30 ～ 11:00　11:10 ～ 12:40 ", "　13:30～16:40　"]
+    },
+
+    "Tuesday": {
+        "week" : "** 2組 Tuesday **",
+        "class" : ["** アルゴリズムと データ構造(https://classroom.google.com/c/MzEyMjY3MzExMzcy) **", "** AIリテラシー概論\n(https://classroom.google.com/c/MzEyMjY2NjEyNDA3) **", "** ビジネス基礎\n(https://classroom.google.com/c/Mjk0NDQyOTU0MDMx) **", "** 情報セキュリティ\n(https://classroom.google.com/c/MzEyMjY3MzExMjIy) **", "** 放課後活動 **"],
+        "time" : ["9:30 ～ 11:00[Meet](https://meet.google.com/app-fieg-vmx)", "11:10 ～ 12:40", "13:30 ～ 15:00", "15:10 ～ 16:40", "16:50 ～ 18:20"]
+    },
+
+    "Wednesday": {
+        "week" : "** 2組 Wednesday **",
+        "class" : ["** データ分析基礎\n(https://classroom.google.com/c/MzEyMjY3MzExMTI2) **", "** 発想法\n(https://classroom.google.com/c/MzEyMjcxNzYwNzM1) **", "** クラウド技術基礎\n(https://classroom.google.com/c/MzEyMjc1MDgwNDA1) **"],
+        "time" : [" 9:30 ～ 11:00[Meet]()","　11:10 ～ 12:40", "　14:15 ～ 16:40　"]
+    },
+
+    "Thursday": {
+        "week" : "** 2組 Thursday **",
+        "class" : ["** IoTもの作り実習\n(https://classroom.google.com/c/MzExOTcyNDMwMDc5) **", "** キャリアデザイン1\n(https://classroom.google.com/c/MzEyMjY2NjEyMzkz) **", "** AIプログラミング基礎\n(https://classroom.google.com/c/MzE3NDk0NDM1ODY1) **", "** ( HAC ) **"],
+        "time" : ["9:30 ～ 11:00", "11:10 ～ 12:40", "13:30 ～ 15:00", "15:10 ～ 16:40", "16:50 ～ 18:20"]
+    },
+
+    "Friday": {
+        "week" : "** 2組 Friday **",
+        "class" : ["** 数学（統計）\n(https://classroom.google.com/c/MzEyMjY3MzExMzgx) **", "** クラウド技術基礎\n(https://classroom.google.com/c/MzEyMjc1MDgwNDA1)**"],
+        "time" : [" 9:30 ～ 11:00","　11:10 ～ 12:40"]
+    }
+}

@@ -1,0 +1,32 @@
+{
+
+    "Monday": {
+        "week"  :"** 1組 Monday **",
+        "class" : ["** Web技術基礎 **", "** コンピュータ・テクノロジー **"],
+        "time" : [" 9:30 ～ 11:00　11:10 ～ 12:40 [ClassRoomのURL](https://classroom.google.com/c/MzEyMjcxNjgzOTM4)", "　13:30～16:40 [ClassRoomのURL](https://classroom.google.com/c/MzEyMjcxNjgzOTcy)"]
+    },
+
+    "Tuesday": {
+        "week" : "** 1組 Tuesday **",
+        "class" : ["** AIリテラシー概論 **", "** アルゴリズムとデータ構造 **", "** 情報セキュリティ **", "** ビジネス基礎 **", "** 放課後活動 **"],
+        "time" : ["9:30 ～ 11:00 [ClassRoomのURL](https://classroom.google.com/c/MzEyMjcxNjgzOTg5)", "11:10 ～ 12:40 [ClassRoomのURL](https://classroom.google.com/c/MzEyMjcxNzYwNjY2)", "13:30 ～ 15:00 [ClassRoomのURL](https://classroom.google.com/c/MzEyMjcxNzYwNjY2)", "15:10 ～ 16:40", "16:50 ～ 18:20 [ClassRoomのURL](https://classroom.google.com/c/MzEyMjcxNzYwNjY2)"]
+    },
+
+    "Wednesday": {
+        "week" : "** 1組 Wednesday **",
+        "class" : ["** データ分析基礎 **", "** 発想法 **", "** クラウド技術基礎 **"],
+        "time" : [" 9:30 ～ 11:00 [ClassRoomのURL](https://classroom.google.com/c/MzEyMjcxNzYwNzI3)","　11:10 ～ 12:40 [ClassRoomのURL](https://classroom.google.com/c/MzEyMjcxNzYwNzM1)", "　14:15 ～ 16:40 [ClassRoomのURL](https://classroom.google.com/c/MzEyMjc1MDgwNDA1)"]
+    },
+
+    "Thursday": {
+        "week" : "** 1組 Thursday **",
+        "class" : ["** IoTもの作り実習 **", "** キャリアデザイン1 **", "** AIプログラミング基礎 **", "** ( HAC ) **"],
+        "time" : ["9:30 ～ 11:00 [ClassRoomのURL](https://classroom.google.com/c/MzExOTcyNDMwMDc5)", "11:10 ～ 12:40 [ClassRoomのURL](https://classroom.google.com/c/MzEyMjcxNzYwNzgw)", "13:30 ～ 15:00 [ClassRoomのURL]()", "15:10 ～ 16:40 [ClassRoomのURL](https://classroom.google.com/c/MzE3NDk0NDM1ODY1)", "16:50 ～ 18:20 [ClassRoomのURL]()"]
+    },
+
+    "Friday": {
+        "week" : "** 1組 Friday **",
+        "class" : ["** クラウド技術基礎 **", "** 数学・統計 **"],
+        "time" : [" 9:30 ～ 11:00 [ClassRoomのURL](https://classroom.google.com/c/MzEyMjc1MDgwNDA1)","　11:10 ～ 12:40 [ClassRoomのURL](https://classroom.google.com/c/MzEyMjc1MDgwNDE5)"]
+    }
+}

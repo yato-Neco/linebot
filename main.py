@@ -1,6 +1,8 @@
 
 
 from flask import Flask, request, abort
+import datetime
+import datetime as dt
  
 from linebot import (
     LineBotApi, WebhookHandler
@@ -59,6 +61,17 @@ def handle_message(event):
 
     if "授業" in event.message.text:
         content = "明日の授業は..."
+
+        today = dt.datetime.now().strftime("%Y/%m/%d")
+        print(today)
+        json_open = open('scls.json', 'r',encoding="utf-8")
+        json_load = json.load(json_open)
+       
+        idx = len(json_load[today]["class"])
+        print(idx)
+        print(dt.datetime.now().strftime("%A"))
+        week = dt.datetime.now().strftime("%A")
+        content = schedule_week2(week)
 
     line_bot_api.reply_message(
         event.reply_token,
